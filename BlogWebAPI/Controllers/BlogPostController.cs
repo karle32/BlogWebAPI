@@ -68,14 +68,14 @@ namespace BlogWebAPI.Controllers
 
         // GET api/blogpost/5
         [HttpGet("{id}")]
-        public IActionResult GetByCategory(int id)
+        public IActionResult GetById(int id)
         {
             try
             {
-                var item = _repository.GetBlogPostByCategory(id);
+                var item = _repository.GetBlogPostById(id);
                 if (item != null)
                 {
-                    var posts = Mapper.Map<IEnumerable<CategoryViewModel>>(item);
+                    var posts = Mapper.Map<BlogPostViewModel>(item);
                     return Ok(posts);
                 }
             }

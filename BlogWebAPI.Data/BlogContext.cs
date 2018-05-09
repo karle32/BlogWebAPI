@@ -43,8 +43,7 @@ namespace BlogWebAPI.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(
-            //    "Server = KARL-PC\\DEVELOPMENT; Database = BlogData; Trusted_Connection = True;");
+            
         }
     }
 }
